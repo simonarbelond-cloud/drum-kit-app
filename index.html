@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the page responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Sets the page title -->
+    <title>KickBeat Drum Kit</title>
+
+    <!-- Connects the CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Connects the JavaScript file after the HTML loads -->
+    <script src="actions.js" defer></script>
+</head>
+<body>
+
+    <!-- Main container for the drum kit -->
+    <main class="drum-kit">
+
+        <!-- Main heading displaying the app name -->
+        <h1>KickBeat Drum Kit</h1>
+
+        <!-- Container holding the drum buttons -->
+        <div class="drum-buttons">
+
+            <!-- Button that plays the kick drum sound -->
+            <button id="kick-button" class="drum-button kick-button" type="button">
+                KICK
+            </button>
+
+            <!-- Button that plays the ride drum sound -->
+            <button id="ride-button" class="drum-button ride-button" type="button">
+                RIDE
+            </button>
+
+        </div>
+
+        <!-- Preloads the kick drum sound -->
+        <audio id="kick-sound" preload="auto">
+            <source src="./sounds/kick.wav" type="audio/wav">
+        </audio>
+
+        <!-- Preloads the ride drum sound -->
+        <audio id="ride-sound" preload="auto">
+            <source src="./sounds/ride.wav" type="audio/wav">
+        </audio>
+
+    </main>
+
+</body>
+</html>

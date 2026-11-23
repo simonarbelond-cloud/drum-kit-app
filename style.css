@@ -1,0 +1,79 @@
+
+/* Applies consistent sizing to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Styles the main page */
+body {
+    background-color: #1e1e2f; /* Sets a dark background */
+    font-family: Arial, sans-serif; /* Sets the page font */
+    margin: 0; /* Removes default margins */
+    min-height: 100vh; /* Makes the page fill the screen height */
+}
+
+/* Centers the drum kit in the middle of the screen */
+.drum-kit {
+    display: flex; /* Uses flexbox for alignment */
+    flex-direction: column; /* Places the title above the buttons */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    min-height: 100vh; /* Uses the full screen height */
+    gap: 25px; /* Adds space between the title and buttons */
+}
+
+/* Styles the main heading */
+h1 {
+    color: #ffffff; /* Makes the title white */
+    font-size: 36px; /* Sets the title size */
+    margin: 0; /* Removes default margins */
+    text-align: center; /* Centers the heading text */
+}
+
+/* Arranges the drum buttons next to each other */
+.drum-buttons {
+    display: flex; /* Places buttons in a row */
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 25px; /* Adds space between buttons */
+    flex-wrap: wrap; /* Allows buttons to wrap on small screens */
+}
+
+/* Styles both drum buttons */
+.drum-button {
+    color: #ffffff; /* Makes the button text white */
+    width: 180px; /* Sets the button width */
+    height: 180px; /* Sets the button height */
+    border: 5px solid; /* Adds a button border */
+    border-radius: 50%; /* Makes the buttons circular */
+    font-size: 28px; /* Sets the button text size */
+    font-weight: bold; /* Makes the text bold */
+    cursor: pointer; /* Shows a pointer when hovering */
+    transition: transform 0.1s ease, background-color 0.2s ease; /* Adds smooth effects */
+}
+
+/* Styles the kick drum button */
+.kick-button {
+    background-color: #ff4081; /* Sets a pink background */
+    border-color: #ff80ab; /* Sets a lighter pink border */
+}
+
+/* Changes the kick button color when hovering */
+.kick-button:hover {
+    background-color: #d81b60; /* Makes the button darker */
+}
+
+/* Styles the ride drum button */
+.ride-button {
+    background-color: #008cba; /* Sets a blue background */
+    border-color: #4fc3f7; /* Sets a lighter blue border */
+}
+
+/* Changes the ride button color when hovering */
+.ride-button:hover {
+    background-color: #006b91; /* Makes the button darker */
+}
+
+/* Adds an effect when either button is pressed */
+.drum-button:active {
+    transform: scale(0.95); /* Makes the button slightly smaller */
+}
