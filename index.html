@@ -25,29 +25,67 @@
         <!-- Main heading displaying the app name -->
         <h1>KickBeat Drum Kit</h1>
 
-        <!-- Container holding the drum buttons -->
+        <!-- Short instruction for keyboard controls -->
+        <p class="instructions">Click a button or use your keyboard to play!</p>
+
+        <!-- Container holding all five drum buttons -->
         <div class="drum-buttons">
 
-            <!-- Button that plays the kick drum sound -->
+            <!-- Kick drum button: press A -->
             <button id="kick-button" class="drum-button kick-button" type="button">
                 KICK
+                <span>A</span>
             </button>
 
-            <!-- Button that plays the ride drum sound -->
+            <!-- Ride drum button: press S -->
             <button id="ride-button" class="drum-button ride-button" type="button">
                 RIDE
+                <span>S</span>
+            </button>
+
+            <!-- Snare drum button: press D -->
+            <button id="snare-button" class="drum-button snare-button" type="button">
+                SNARE
+                <span>D</span>
+            </button>
+
+            <!-- Tom drum button: press F -->
+            <button id="tom-button" class="drum-button tom-button" type="button">
+                TOM
+                <span>F</span>
+            </button>
+
+            <!-- Hi-hat button: press G -->
+            <button id="hihat-button" class="drum-button hihat-button" type="button">
+                HI-HAT
+                <span>G</span>
             </button>
 
         </div>
 
-        <!-- Preloads the kick drum sound -->
+        <!-- Audio element for the kick drum -->
         <audio id="kick-sound" preload="auto">
             <source src="./sounds/kick.wav" type="audio/wav">
         </audio>
 
-        <!-- Preloads the ride drum sound -->
+        <!-- Audio element for the ride drum -->
         <audio id="ride-sound" preload="auto">
             <source src="./sounds/ride.wav" type="audio/wav">
+        </audio>
+
+        <!-- Audio element for the snare drum -->
+        <audio id="snare-sound" preload="auto">
+            <source src="./sounds/snare.wav" type="audio/wav">
+        </audio>
+
+        <!-- Audio element for the tom drum -->
+        <audio id="tom-sound" preload="auto">
+            <source src="./sounds/tom.wav" type="audio/wav">
+        </audio>
+
+        <!-- Audio element for the hi-hat -->
+        <audio id="hihat-sound" preload="auto">
+            <source src="./sounds/hihat.wav" type="audio/wav">
         </audio>
 
     </main>

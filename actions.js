@@ -1,67 +1,100 @@
 
-// Finds the kick drum button
+/* Finds the kick drum button and sound */
 const kickButton = document.getElementById("kick-button");
-
-// Finds the ride drum button
-const rideButton = document.getElementById("ride-button");
-
-// Finds the kick drum audio element
 const kickSound = document.getElementById("kick-sound");
 
-// Finds the ride drum audio element
+/* Finds the ride drum button and sound */
+const rideButton = document.getElementById("ride-button");
 const rideSound = document.getElementById("ride-sound");
 
-// Creates a function to play the kick drum
+/* Finds the snare drum button and sound */
+const snareButton = document.getElementById("snare-button");
+const snareSound = document.getElementById("snare-sound");
+
+/* Finds the tom drum button and sound */
+const tomButton = document.getElementById("tom-button");
+const tomSound = document.getElementById("tom-sound");
+
+/* Finds the hi-hat button and sound */
+const hihatButton = document.getElementById("hihat-button");
+const hihatSound = document.getElementById("hihat-sound");
+
+
+/* Creates a function to play the kick drum */
 function playKick() {
-
-    // Restarts the kick sound from the beginning
     kickSound.currentTime = 0;
-
-    // Plays the kick drum sound
-    kickSound.play().catch(function(error) {
-
-        // Displays an error if the kick sound cannot play
+    kickSound.play().catch(error => {
         console.error("Could not play the kick sound:", error);
-
     });
 }
 
-// Creates a function to play the ride drum
+/* Creates a function to play the ride drum */
 function playRide() {
-
-    // Restarts the ride sound from the beginning
     rideSound.currentTime = 0;
-
-    // Plays the ride drum sound
-    rideSound.play().catch(function(error) {
-
-        // Displays an error if the ride sound cannot play
+    rideSound.play().catch(error => {
         console.error("Could not play the ride sound:", error);
-
     });
 }
 
-// Plays the kick sound when the KICK button is clicked
+/* Creates a function to play the snare drum */
+function playSnare() {
+    snareSound.currentTime = 0;
+    snareSound.play().catch(error => {
+        console.error("Could not play the snare sound:", error);
+    });
+}
+
+/* Creates a function to play the tom drum */
+function playTom() {
+    tomSound.currentTime = 0;
+    tomSound.play().catch(error => {
+        console.error("Could not play the tom sound:", error);
+    });
+}
+
+/* Creates a function to play the hi-hat */
+function playHihat() {
+    hihatSound.currentTime = 0;
+    hihatSound.play().catch(error => {
+        console.error("Could not play the hi-hat sound:", error);
+    });
+}
+
+
+/* Plays each drum sound when its button is clicked */
 kickButton.addEventListener("click", playKick);
-
-// Plays the ride sound when the RIDE button is clicked
 rideButton.addEventListener("click", playRide);
+snareButton.addEventListener("click", playSnare);
+tomButton.addEventListener("click", playTom);
+hihatButton.addEventListener("click", playHihat);
 
-// Detects when the user presses a key on the keyboard
+
+/* Detects when the user presses a key on the keyboard */
 document.addEventListener("keydown", function(event) {
 
-    // Checks if the user pressed the A key
+    /* Plays kick when the A key is pressed */
     if (event.key.toLowerCase() === "a") {
-
-        // Plays the kick drum
         playKick();
     }
 
-    // Checks if the user pressed the S key
+    /* Plays ride when the S key is pressed */
     if (event.key.toLowerCase() === "s") {
-
-        // Plays the ride drum
         playRide();
+    }
+
+    /* Plays snare when the D key is pressed */
+    if (event.key.toLowerCase() === "d") {
+        playSnare();
+    }
+
+    /* Plays tom when the F key is pressed */
+    if (event.key.toLowerCase() === "f") {
+        playTom();
+    }
+
+    /* Plays hi-hat when the G key is pressed */
+    if (event.key.toLowerCase() === "g") {
+        playHihat();
     }
 
 });

@@ -6,74 +6,145 @@
 
 /* Styles the main page */
 body {
-    background-color: #1e1e2f; /* Sets a dark background */
-    font-family: Arial, sans-serif; /* Sets the page font */
-    margin: 0; /* Removes default margins */
-    min-height: 100vh; /* Makes the page fill the screen height */
+    background-color: #1e1e2f;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
 }
 
 /* Centers the drum kit in the middle of the screen */
 .drum-kit {
-    display: flex; /* Uses flexbox for alignment */
-    flex-direction: column; /* Places the title above the buttons */
-    justify-content: center; /* Centers content vertically */
-    align-items: center; /* Centers content horizontally */
-    min-height: 100vh; /* Uses the full screen height */
-    gap: 25px; /* Adds space between the title and buttons */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 25px;
 }
 
 /* Styles the main heading */
 h1 {
-    color: #ffffff; /* Makes the title white */
-    font-size: 36px; /* Sets the title size */
-    margin: 0; /* Removes default margins */
-    text-align: center; /* Centers the heading text */
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Styles the keyboard instructions */
+.instructions {
+    color: #cccccc;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 0 10px;
 }
 
 /* Arranges the drum buttons next to each other */
 .drum-buttons {
-    display: flex; /* Places buttons in a row */
-    justify-content: center; /* Centers the buttons horizontally */
-    gap: 25px; /* Adds space between buttons */
-    flex-wrap: wrap; /* Allows buttons to wrap on small screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Styles both drum buttons */
+/* Styles all drum buttons */
 .drum-button {
-    color: #ffffff; /* Makes the button text white */
-    width: 180px; /* Sets the button width */
-    height: 180px; /* Sets the button height */
-    border: 5px solid; /* Adds a button border */
-    border-radius: 50%; /* Makes the buttons circular */
-    font-size: 28px; /* Sets the button text size */
-    font-weight: bold; /* Makes the text bold */
-    cursor: pointer; /* Shows a pointer when hovering */
-    transition: transform 0.1s ease, background-color 0.2s ease; /* Adds smooth effects */
+    color: #ffffff;
+    width: 150px;
+    height: 150px;
+    border: 5px solid;
+    border-radius: 50%;
+    font-size: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+/* Displays the keyboard shortcut inside each button */
+.drum-button span {
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 /* Styles the kick drum button */
 .kick-button {
-    background-color: #ff4081; /* Sets a pink background */
-    border-color: #ff80ab; /* Sets a lighter pink border */
+    background-color: #ff4081;
+    border-color: #ff80ab;
 }
 
 /* Changes the kick button color when hovering */
 .kick-button:hover {
-    background-color: #d81b60; /* Makes the button darker */
+    background-color: #d81b60;
 }
 
 /* Styles the ride drum button */
 .ride-button {
-    background-color: #008cba; /* Sets a blue background */
-    border-color: #4fc3f7; /* Sets a lighter blue border */
+    background-color: #008cba;
+    border-color: #4fc3f7;
 }
 
 /* Changes the ride button color when hovering */
 .ride-button:hover {
-    background-color: #006b91; /* Makes the button darker */
+    background-color: #006b91;
 }
 
-/* Adds an effect when either button is pressed */
+/* Styles the snare drum button */
+.snare-button {
+    background-color: #8e44ad;
+    border-color: #bb8fce;
+}
+
+/* Changes the snare button color when hovering */
+.snare-button:hover {
+    background-color: #6c3483;
+}
+
+/* Styles the tom drum button */
+.tom-button {
+    background-color: #e67e22;
+    border-color: #f5b041;
+}
+
+/* Changes the tom button color when hovering */
+.tom-button:hover {
+    background-color: #ca6f1e;
+}
+
+/* Styles the hi-hat button */
+.hihat-button {
+    background-color: #27ae60;
+    border-color: #58d68d;
+}
+
+/* Changes the hi-hat button color when hovering */
+.hihat-button:hover {
+    background-color: #1e8449;
+}
+
+/* Adds an effect when a drum button is pressed */
 .drum-button:active {
-    transform: scale(0.95); /* Makes the button slightly smaller */
+    transform: scale(0.93);
+}
+
+/* Adjusts the buttons for smaller screens */
+@media (max-width: 600px) {
+    .drum-button {
+        width: 125px;
+        height: 125px;
+        font-size: 19px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .drum-buttons {
+        gap: 15px;
+    }
 }
